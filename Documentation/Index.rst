@@ -30,7 +30,7 @@ My Public Info Project
    Think of it as key-value pairs.
 
 
-:Writing here:    `Phil <phil@example.com>`__
+:Writing here:    Philipp Gampe 
 :Rendered:        |today|
 :Buildinfo:       `buildinfo <_buildinfo>`_
 
