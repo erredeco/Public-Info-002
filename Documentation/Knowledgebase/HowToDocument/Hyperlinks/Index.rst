@@ -1,29 +1,9 @@
-.. Tip - just do it:
-      don't use TABs (= \t, tabulators)
-      replace each TAB by *three blanks* (enable RegExp for Search and Replace in your IDE)
-      set TAB width and indentation to THREE in your IDE
-      set 'Use blanks instead of TABs' in your IDE
-
-
-.. With the following include we import some definition. We do this in each and every file.
-   so we can change the definition at a single place. Use the relative path to the Includes.txt file,
-   which may look as well like ../../../Includes.txt for a deeply nested source file.
-
-.. include:: ../Includes.txt
-
-
-.. Usually we define 'php' as default highlight language in Includes.txt.
-   With the following 'highlight' directive we switch to reStructuredText as default highlight language.
-
+.. include:: ../../../Includes.txt
 .. highlight:: rst
 
-
-.. The following, first section (= headline) is the 'Document Title'.
-
-
-======================
+==========
 Hyperlinks
-======================
+==========
 
 
 The complete, anonymous form
@@ -37,11 +17,11 @@ means that the `linktext` is NOT added to the internal table of known link defin
 
 Example::
 
-   See `buildinfo <https://docs.typo3.org/typo3cms/drafts/github/T3DocumentationStarter/Public-Info-002/_buildinfo/>`__
+   See `buildinfo <https://docs.typo3.org/typo3cms/drafts/github/T3DocumentationStarter/Public-Info-041/_buildinfo/>`__
 
 Result:
 
-See `buildinfo <https://docs.typo3.org/typo3cms/drafts/github/T3DocumentationStarter/Public-Info-002/_buildinfo/>`__
+See `buildinfo <https://docs.typo3.org/typo3cms/drafts/github/T3DocumentationStarter/Public-Info-041/_buildinfo/>`__
 
 
 
@@ -51,7 +31,7 @@ A named link
 
 Define the linktext `buildinfo` and the url somewhere in the document::
 
-   .. _buildinfo: https://docs.typo3.org/typo3cms/drafts/github/T3DocumentationStarter/Public-Info-002/_buildinfo/
+   .. _buildinfo: https://docs.typo3.org/typo3cms/drafts/github/T3DocumentationStarter/Public-Info-041/_buildinfo/
 
 Use the defined link as often as you like::
 
@@ -61,7 +41,7 @@ Result:
 
 See the buildinfo_. See the buildinfo_. See the buildinfo_.
 
-.. _buildinfo: https://docs.typo3.org/typo3cms/drafts/github/T3DocumentationStarter/Public-Info-002/_buildinfo/
+.. _buildinfo: https://docs.typo3.org/typo3cms/drafts/github/T3DocumentationStarter/Public-Info-041/_buildinfo/
 
 tip::
 
