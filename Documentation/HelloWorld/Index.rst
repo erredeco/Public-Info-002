@@ -30,8 +30,8 @@ The system extension CKEditor can be extended via plugins; it comes with a serie
 .. warning::
    Add a paragraph with the link about how to install your own plugin (another page)
    
-Subtopic 1.1
-------------
+Plugin list
+-----------
 
 .. container:: table-row
 
@@ -48,5 +48,29 @@ Subtopic 1.1
          None necessary
 
    Usage
-         `alt+0` to show the modal 
+         `alt+0` to show the modal
+
+   Plugin name
+         about (`About CKEditor <https://ckeditor.com/cke4/addon/about>`__)
+
+   Already present in config
+         Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+         This plugin adds a button to display CKEditor version, online documentation links, and licensing information.
+
+   Installation
+         .. code-block:: yaml
+            editor:
+              config:
+                toolbarGroups:
+                  - { name: about }
+              extraPlugins:
+                - about
+
+
+         
+
+
+ 
          
