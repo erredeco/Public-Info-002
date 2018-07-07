@@ -107,6 +107,7 @@ ajax
          
    Additional information
          `https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_ajax.html`__
+
 autoembed
 ~~~~~~~~~
 
@@ -134,5 +135,5 @@ autoembed
                extraPlugins:
                   - autoembed
      
-     .. danger::
-        Tried with both youtube videos and vimeo, without success!, also I was not able to configure properly nor embed neither embedsemantic.
+      .. danger::
+         Tried with both youtube videos and vimeo, without success!, also I was not able to configure properly nor embed neither embedsemantic.
