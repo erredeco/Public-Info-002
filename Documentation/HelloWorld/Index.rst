@@ -342,7 +342,7 @@ cloudservices
          How to make an example?
 
 codesnippet               
-~~~~
+~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -367,22 +367,109 @@ codesnippet
                extraPlugins:
                   - codesnippet
 
-               # insert toolbar adds also image support, that should be removed.
+               # insert toolbar adds also image support, that must be removed.
                removePlugins:
                   - image
 
 
                #configuration example:
-               editor:
-                 config:
-                  codeSnippet_theme:
-                     - school_book
+               codeSnippet_theme:
+                  - school_book
 
-                  codeSnippet_languages:
-                     javascript: 'JavaScript'
-                     php: 'PHP' 
+               codeSnippet_languages:
+                  javascript: 'JavaScript'
+                  php: 'PHP' 
 
    Additional information
       - https://docs.ckeditor.com/ckeditor4/latest/guide/dev_codesnippet.html
       - http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-codeSnippet_theme
       - http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-codeSnippet_languages
+
+codesnippetgeshi               
+~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      codesnippetgeshi (`Code Snippet GeSHi <https://ckeditor.com/cke4/addon/codesnippetgeshi>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) This plugin lets you insert rich code snippets with syntax highlighting provided by the server-side GeSHi engine into the editor.
+
+   Installation
+      [TBD]
+
+   Additional information
+      - https://docs.ckeditor.com/ckeditor4/latest/guide/dev_codesnippetgeshi.html
+      - http://qbnz.com/highlighter/
+
+      .. danger::
+         Don't know how to make it work
+
+colorbutton
+~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      colorbutton (`Color Button <https://ckeditor.com/cke4/addon/colorbutton>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) This plugin adds the Text Color and Background Color feature to the editor.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               toolbarGroups:
+                  - { name: colors }            
+
+               extraPlugins:
+                  - colorbutton
+
+               #configuration example:
+               colorButton_colors: "F49800,B9B9B9,75A75A"
+
+
+   Additional information
+      Look here for the list of possible configurations: https://ckeditor.com/cke4/addon/colorbutton
+
+colordialog
+~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      colordialog (`Color Dialog <https://ckeditor.com/cke4/addon/colordialog>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) This plugin provides a dedicated Select Color dialog window with a table of colors that can be chosen with your mouse.
+
+   Installation
+      Install colorbutton_ before 
+
+      .. code-block:: yaml
+         editor:
+            config:
+               toolbarGroups:
+                  - { name: colors }            
+
+               extraPlugins:
+                  - colorbutton
+                  - colordialog
+
+               #configuration example:
+               colorButton_colors: "F49800,B9B9B9,75A75A"                  
+   
+   Additional information
+      Look here for the list of possible configurations: https://ckeditor.com/cke4/addon/colordialog
