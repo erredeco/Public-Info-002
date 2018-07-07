@@ -48,7 +48,7 @@ a11yhelp
       This plugin opens a dialog window that shows the keystrokes to access each function of the editor
 
    Installation
-      None necessary
+      None necessary, already loaded in the editor 
 
    Usage
       `alt+0` to show the modal
@@ -160,7 +160,7 @@ autogrow
                extraPlugins:
                   - autogrow
 
-               #example of configuration   
+               #configuration example   
                autoGrow_minHeight: "250"
                autoGrow_maxHeight: "600"            
          
@@ -222,7 +222,7 @@ balloonpanel
          Used only with accessibilitychecker (paid plugin)
 
 
-balloontoolbar               
+balloontoolbar
 ~~~~~~~~~~~~~~
 
 .. container:: table-row
@@ -300,3 +300,89 @@ bidi
 
                extraPlugins:
                   - bidi
+
+clipboard
+~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      clipboard (`Clipboard <https://ckeditor.com/cke4/addon/clipboard>`__)
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**
+
+   Description
+      (taken from the official page) This plugin handles cut/copy/paste inside of the editor, processed the clipboard content on pasting.
+
+   Installation
+      None necessary, already loaded in the editor      
+
+cloudservices
+~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      cloudservices (`Cloud Services <https://ckeditor.com/cke4/addon/cloudservices>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** (ONLY IN VERSION 9)
+
+   Description
+      (taken from the official page) The plugin allows to integrate CKEditor 4 instances with CKEditor Cloud Services, including the Easy Image upload backend.
+
+   Installation
+      [TBD]
+         
+   Usage
+      [TBD]
+
+      .. danger::
+         How to make an example?
+
+codesnippet               
+~~~~
+
+.. container:: table-row
+
+   Plugin name
+      codesnippet (`Code Snippet <https://ckeditor.com/cke4/addon/codesnippet>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) This plugin lets you insert rich code snippets with syntax highlighting into the editor.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup if needed (e.g. default and full configuration alreay have it.)
+               toolbarGroups:
+                  - { name: insert }            
+
+               extraPlugins:
+                  - codesnippet
+
+               # insert toolbar adds also image support, that should be removed.
+               removePlugins:
+                  - image
+
+
+               #configuration example:
+               editor:
+                 config:
+                  codeSnippet_theme:
+                     - school_book
+
+                  codeSnippet_languages:
+                     javascript: 'JavaScript'
+                     php: 'PHP' 
+
+   Additional information
+      - https://docs.ckeditor.com/ckeditor4/latest/guide/dev_codesnippet.html
+      - http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-codeSnippet_theme
+      - http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-codeSnippet_languages
