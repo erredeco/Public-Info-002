@@ -473,3 +473,89 @@ colordialog
    
    Additional information
       Look here for the list of possible configurations: https://ckeditor.com/cke4/addon/colordialog
+
+
+copyformatting
+~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      copyformatting (`Copy Formatting <https://ckeditor.com/cke4/addon/copyformatting>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) Allows for quick and easy copying of text formatting between the parts of your document. By default, it provides support for copying text, list and table styles.
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               # add `cleanup` to the `basicstyles` toolbarGroup if not already present (in default.yaml and full.yaml, it is.)
+               toolbarGroups:
+                  - { name: basicstyles, groups: [ basicstyles, cleanup ] }            
+
+               extraPlugins:
+                  - copyformatting
+
+devtools
+~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      devtools (`Developer Tools <https://ckeditor.com/cke4/addon/devtools>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      The plugin aims to help CKEditor plugin developers by adding a floating box with informations about the CKEditor dialog windows elements (like name, ID, tab name and a link to the appropriate `CKEditor API <https://docs.ckeditor.com/ckeditor4/latest/api/index.html>`__.
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               extraPlugins:
+                  - devtools
+
+dialog
+~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      dialog (`Dialog <https://ckeditor.com/cke4/addon/dialog>`__)
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**
+
+   Description
+      (taken from the official page) This plugin provides the dialog API for other plugins to build an editor dialog.
+
+   Installation
+      None necessary, already loaded in the editor 
+
+
+dialogadvtab
+~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      dialogadvtab (`Advanced Tab for Dialogs <https://ckeditor.com/cke4/addon/dialogadvtab>`__)
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes** (NOT SURE!)
+
+   Description
+      (taken from the official page) This plugin provides the Advanced dialog window tab to extend some editor dialog windows; some of the features added (they depend on the plugin) are for example background color, language direction, Tab index...
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               extraPlugins:
+                  - dialogadvtab
