@@ -33,6 +33,9 @@ The system extension CKEditor can be extended via plugins; it comes with a serie
 Plugin list
 -----------
 
+a11yhelp
+~~~~~~~~
+
 .. container:: table-row
 
    Plugin name
@@ -50,6 +53,11 @@ Plugin list
    Usage
          `alt+0` to show the modal
 
+about
+~~~~~~~~
+
+.. container:: table-row
+
    Plugin name
          about (`About CKEditor <https://ckeditor.com/cke4/addon/about>`__)
 
@@ -60,13 +68,15 @@ Plugin list
          This plugin adds a button to display CKEditor version, online documentation links, and licensing information.
 
    Installation
-         .. code-block:: yaml
-            editor:
-              config:
-                toolbarGroups:
-                  - { name: about }
-              extraPlugins:
-                - about
+         .. highlight:: bash
+
+         ::
+         editor:
+           config:
+             toolbarGroups:
+               - { name: about }
+           extraPlugins:
+             - about
 
 
          
