@@ -81,7 +81,7 @@ adobeair
 ~~~~~~~~
 
 .. danger::
-   No information available for this plugin, not even listed on `https://ckeditor.com/cke4/addons/plugins/all`__
+   No information available for this plugin, not even listed on https://ckeditor.com/cke4/addons/plugins/all
 
 ajax
 ~~~~
@@ -106,7 +106,7 @@ ajax
          I don't know how to make a full example or if it is necessary
          
    Additional information
-         `https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_ajax.html`__
+         https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_ajax.html
 
 autoembed
 ~~~~~~~~~
@@ -165,7 +165,7 @@ autogrow
                autoGrow_maxHeight: "600"            
          
    Additional information
-         `https://docs.ckeditor.com/ckeditor4/latest/guide/dev_autogrow.html`__
+         https://docs.ckeditor.com/ckeditor4/latest/guide/dev_autogrow.html
 
 autolink
 ~~~~~~~~
@@ -190,7 +190,8 @@ autolink
              - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
       or just the single plugin can be loaded: 
-       .. code-block:: yaml     
+      
+      .. code-block:: yaml     
          
          editor:
             externalPlugins:
@@ -271,7 +272,7 @@ bbcode
          how to configure TYPO3 to accept this kind of output?
 
    Additional information
-         `https://www.phpbb.com/community/faq.php?mode=bbcode`__
+         https://www.phpbb.com/community/faq.php?mode=bbcode
 
 
 bidi               
