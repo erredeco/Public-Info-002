@@ -190,7 +190,6 @@ autolink
              - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
       or just the single plugin can be loaded: 
-
        .. code-block:: yaml     
          
          editor:
@@ -290,14 +289,13 @@ bidi
       (taken from the official page) This plugin makes it possible to change the text direction (HTML "dir" attribute) for a block-level content element such as a paragraph, header, table or list. It is useful for working with bi-directional language content.
 
    Installation
-
       .. code-block:: yaml
-      
+
          editor:
             config:
                # toolbargroup example taken from the `full.yaml`) configuration file:
                toolbarGroups:
                   - { name: paragraph,   groups: [ list, indent, blocks, align, bidi ] }               
-               
+
                extraPlugins:
                   - bidi
