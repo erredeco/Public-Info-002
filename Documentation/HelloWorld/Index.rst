@@ -137,4 +137,4 @@ autoembed
                      - autoembed
         
         .. danger::
-            Tried with both youtube videos and vimeo, without success!, also I was not able to configure properly nor embed             neither embedsemantic
+            Tried with both youtube videos and vimeo, without success!, also I was not able to configure properly nor embed             neither embedsemantic.
