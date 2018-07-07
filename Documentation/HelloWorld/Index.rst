@@ -85,56 +85,54 @@ adobeair
 
 ajax
 ~~~~
-
 .. container:: table-row
 
    Plugin name
-         ajax (`Ajax Data Loading <https://ckeditor.com/cke4/addon/ajax>`__)
-
+      ajax (`Ajax Data Loading <https://ckeditor.com/cke4/addon/ajax>`__)
+   
    Already present in config
-         Minimal:**no** | Default: **no** | Full: **no** **[NOTE:I GUESS!]**
-
+      Minimal:**no** | Default: **no** | Full: **no** **[NOTE:I GUESS!]**
+   
    Description
-         (taken from the official page)
-         This plugin provides additional APIs to work with Ajax and XML in the editor.
-         
-  Installation
-         [TBD]
+      (taken from the official page) This plugin provides additional APIs to work with Ajax and XML in the editor.
 
+   Installation
+      [TBD]
+         
    Usage
-         [TBD]
-         .. danger::
-            I don't know how to make a full example or if it is necessary
+      [TBD]
+      
+      .. danger::
+         I don't know how to make a full example or if it is necessary
          
    Additional information
          `https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_ajax.html`__
-         
 autoembed
 ~~~~~~~~~
 
 .. container:: table-row
 
    Plugin name
-         autoembed (`Auto Embed <https://ckeditor.com/cke4/addon/autoembed>`__)
+      autoembed (`Auto Embed <https://ckeditor.com/cke4/addon/autoembed>`__)
 
    Already present in config
-         Minimal:**no** | Default: **no** | Full: **no**         
+      Minimal:**no** | Default: **no** | Full: **no**         
          
    Description
-         (taken from the official page)
-         This plugin automatically turns a media resource URL pasted into the editing area into an embedded resource
-         you can to ctrl+v of https://www.youtube.com/watch?v=O_JgQcu5y50 in the area and it becomes a video   
+      (taken from the official page)
+      This plugin automatically turns a media resource URL pasted into the editing area into an embedded resource
+      you can to ctrl+v of https://www.youtube.com/watch?v=O_JgQcu5y50 in the area and it becomes a video   
    
    Installation
-         requires "embed" or "embedsemantic"
-         Add after "embed" Or Add after "embedsemantic"
+      requires "embed" or "embedsemantic"
+      Add after "embed" Or Add after "embedsemantic"
 
-         .. code-block:: yaml
-         
-            editor:
-               config:
-                  extraPlugins:
-                     - autoembed
-        
-        .. danger::
-            Tried with both youtube videos and vimeo, without success!, also I was not able to configure properly nor embed             neither embedsemantic.
+      .. code-block:: yaml
+      
+         editor:
+            config:
+               extraPlugins:
+                  - autoembed
+     
+     .. danger::
+        Tried with both youtube videos and vimeo, without success!, also I was not able to configure properly nor embed neither embedsemantic.
