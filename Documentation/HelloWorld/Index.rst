@@ -68,15 +68,14 @@ about
          This plugin adds a button to display CKEditor version, online documentation links, and licensing information.
 
    Installation
- 
          .. code-block:: yaml
          
-         editor:
-           config:
-             toolbarGroups:
-               - { name: about }
-             extraPlugins:
-               - about
+            editor:
+               config:
+                  toolbarGroups:
+                     - { name: about }
+                  extraPlugins:
+                     - about
 
 
 
