@@ -71,12 +71,12 @@ about
  
          .. code-block:: yaml
          
-             editor:
-               config:
-                 toolbarGroups:
-                   - { name: about }
-                 extraPlugins:
-                   - about
+         editor:
+           config:
+             toolbarGroups:
+               - { name: about }
+             extraPlugins:
+               - about
 
 
 
