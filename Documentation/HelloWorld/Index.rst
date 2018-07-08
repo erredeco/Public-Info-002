@@ -548,7 +548,7 @@ dialogadvtab
       dialogadvtab (`Advanced Tab for Dialogs <https://ckeditor.com/cke4/addon/dialogadvtab>`__)
 
    Already present in config
-      Minimal:**yes** | Default: **yes** | Full: **yes** (NOT SURE!)
+      Minimal:**no** | Default: **no** | Full: **no** (**NOT ENTIRELY SURE!! COULD BE ALREADY LOADED??**)
 
    Description
       (taken from the official page) This plugin provides the Advanced dialog window tab to extend some editor dialog windows; some of the features added (they depend on the plugin) are for example background color, language direction, Tab index...
@@ -559,3 +559,54 @@ dialogadvtab
             config:
                extraPlugins:
                   - dialogadvtab
+
+
+
+div
+~~~
+
+.. container:: table-row
+
+   Plugin name
+      div (`Div Container Manager <https://ckeditor.com/cke4/addon/div>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) This plugin adds a command that allows for grouping of content blocks under a <div> element as a container, with styles and attributes optionally specified in a dedicated dialog.
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               #add the toolbargroup 'paragraph' if needed; it must contain the 'blocks' group (default.yaml and full.yaml already have it.)
+               toolbarGroups:
+                  - { name: paragraph,   groups: [ blocks ] }
+               extraPlugins:
+                  - div
+               #configuration example (look also at full.yaml):      
+               stylesSet:                   
+                  - { name: "Red div", element: "div", styles: { color: "yellow", background: "red" } } 
+
+   Additional information
+      (taken from the official page) It is possible to configure the created <div> element to wrap an entire HTML table instead of individual cells with the `config.div_wrapTable <https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-div_wrapTable>`__ option.
+
+
+divarea
+~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      divarea (`Div Editing Area <https://ckeditor.com/cke4/addon/divarea>`__)
+
+   Already present in config
+      Minimal:**?** | Default: **?** | Full: **?** (**??**)
+
+   Description
+      (taken from the official page) This plugin uses a <div> element (instead of the traditional <iframe> element) as the editable area in the themedui creator. Much similar to inline editing, it benefits from allowing the editor content to inherit from host page styles.
+
+   Installation
+      .. danger::
+         Don't know if it is already installed or not or how to tell the difference!
