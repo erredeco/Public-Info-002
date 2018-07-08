@@ -182,7 +182,7 @@ autolink
 
    Installation
       .. attention::
-         don't add the one from the contrib folder; the custom version shipped with TYPO3 should be used:
+         don't add the one from the contrib folder; the custom version shipped with TYPO3 must be used:
 
       .. code-block:: yaml
          
@@ -360,7 +360,7 @@ codesnippet
 
          editor:
             config:
-               # add the toolbargroup if needed (e.g. default and full configuration alreay have it.)
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
                toolbarGroups:
                   - { name: insert }            
 
@@ -493,7 +493,7 @@ copyformatting
       .. code-block:: yaml
          editor:
             config:
-               # add `cleanup` to the `basicstyles` toolbarGroup if not already present (in default.yaml and full.yaml, it is.)
+               # add `cleanup` to the `basicstyles` toolbarGroup if needed (e.g. default.yaml and full.yaml, configurations already have it)
                toolbarGroups:
                   - { name: basicstyles, groups: [ basicstyles, cleanup ] }            
 
@@ -580,7 +580,7 @@ div
       .. code-block:: yaml
          editor:
             config:
-               #add the toolbargroup 'paragraph' if needed; it must contain the 'blocks' group (default.yaml and full.yaml already have it.)
+               #add the toolbargroup 'paragraph' if needed; it must contain the 'blocks' group (default.yaml and full.yaml configurations already have it.)
                toolbarGroups:
                   - { name: paragraph,   groups: [ blocks ] }
                extraPlugins:
@@ -630,7 +630,7 @@ docprops
       .. code-block:: yaml
          editor:
             config:
-               #add the toolbargroup 'document' if needed; (default.yaml and full.yaml already have it.)            
+               #add the toolbargroup 'document' if needed; (default.yaml and full.yaml configurations already have it.)            
                toolbarGroups:
                   - { name: document }  
 
@@ -667,7 +667,7 @@ embed
 .. container:: table-row
 
    Plugin name
-      easyimage (`Media Embed <https://ckeditor.com/cke4/addon/embed>`__)        
+      embed (`Media Embed <https://ckeditor.com/cke4/addon/embed>`__)        
 
    Already present in config
       Minimal:**no** | Default: **no** | Full: **no**
@@ -676,10 +676,14 @@ embed
       (taken from the official page) This plugin lets you embed media resources directly in the editor. 
 
    Installation
+
+      .. attention::
+         don't use with embedsemantic_ just use one of those two.
+
       .. code-block:: yaml
          editor:
             config:
-               # add the toolbargroup if needed (e.g. default and full configuration alreay have it.)
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
                toolbarGroups:
                   - { name: insert }            
 
@@ -693,7 +697,13 @@ embed
                # configure content provider
                embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}'   
 
+         processing:
+            allowTags:
+               - iframe 
+
+
       .. danger::
+         -  the configuration is not complete! 
          -  you need to set up an account to https://iframely.com/ ? (paid)
          - Look at https://docs.ckeditor.com/ckeditor4/latest/guide/dev_media_embed.html#configuring-the-content-provider
          - the html is converted into `&lt;iframe&gt;...` and gets surrounded by a paragraph...how to configure it?!
@@ -702,7 +712,7 @@ embed
 embedbase
 ~~~~~~~~~
 
- .. container:: table-row
+.. container:: table-row
 
    Plugin name
       embedbase (`Media Embed Base <https://ckeditor.com/cke4/addon/embedbase>`__)        
@@ -714,6 +724,8 @@ embedbase
       (taken from the official page) This plugin is a base of the Media Embed and Semantic Media Embed plugins. It exposes a set of tools under the CKEDITOR.plugins.embedBase namespace which can be used to create new media embed widgets. 
 
    Installation
+
+
       .. danger::
          Actually, I have not tested it... this installation configuration is not complete!
 
@@ -725,3 +737,206 @@ embedbase
 
       .. danger::
          Would it be possible to make a complete example?
+
+
+embedsemantic
+~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      embedsemantic (`Semantic Media Embed <https://ckeditor.com/cke4/addon/embedsemantic>`__)        
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin lets you embed media resources with semantic output directly in the editor. The plugin introduces a widget that allows you to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in your content.
+   
+   Installation
+
+      .. attention::
+         don't use with embed_ just use one of those two.
+            
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               toolbarGroups:
+                  - { name: insert }            
+
+               extraPlugins:
+                  - embedsemantic
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+               # configure content provider (don't know if it is needed, maybe not!)
+               embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}'  
+         
+         processing:
+            allowTags:
+               - oembed                
+
+      .. danger::
+         -  the configuration is not complete!       
+         - Look at https://docs.ckeditor.com/ckeditor4/latest/guide/dev_media_embed.html#configuring-the-content-provider
+         - the `<oembed>` is converted into p!!!! How to change????
+
+
+filetools
+~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      filetools (`File Tools <https://ckeditor.com/cke4/addon/filetools>`__)        
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**
+   
+   Description
+      (taken from the official page) This plugin exposes a set of tools such as the UploadRepository and FileLoader which simplify operations on files like loading or uploading. This plugin is used for example by the Upload Widget and Upload Image plugins.
+
+   Installation
+      None necessary, already loaded in the editor 
+
+
+find
+~~~~
+
+.. container:: table-row
+
+   Plugin name
+      find (`Find/ Replace <https://ckeditor.com/cke4/addon/find>`__)        
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **yes**
+   
+   Description
+      (taken from the official page) This plugin adds Find and Replace dialog, allowing you to quickly search the text as well as replace words inside it. Common options available for matching: case, whole word, cyclic.
+
+   Installation
+
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup if needed (e.g. full.yaml configuration alreay has it.)
+               toolbarGroups:
+                  - { name: editing,   groups: [find] }          
+
+               extraPlugins:
+                  - find
+
+flash
+~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      flash (`Flash Dialog <https://ckeditor.com/cke4/addon/flash>`__)        
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin comes with a dialog to manage flash embed in the document, set standard and advanced properties. 
+
+   Installation
+
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               toolbarGroups:
+                  - { name: insert }            
+
+               extraPlugins:
+                  - flash
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+         processing:
+            allowTags:
+               - object 
+
+
+      .. danger::
+         -  the configuration is not complete! 
+         - the html is converted into `&lt;object&gt;...` and gets surrounded by a paragraph...how to configure it?!
+
+
+
+font
+~~~~
+
+.. container:: table-row
+
+   Plugin name
+      font (`Font Size and Family <https://ckeditor.com/cke4/addon/font>`__)        
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **yes**
+   
+   Description
+      (taken from the official page) This plugin adds Font Size and Font Family dropdowns that applies as inline element style. 
+
+   Installation
+
+      .. code-block:: yaml
+         editor:
+            config:
+               stylesSet:
+                  # Examples of styles taken from full.yaml configuration
+                  - { name: "Orange title H2", element: "h2", styles: { color: "orange", background: "blue" } }
+                  - { name: "Orange title H3", element: "h3", styles: { color: "orange", background: "blue" } }
+
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               toolbarGroups:
+                  - { name: styles }         
+
+               extraPlugins:
+                  - font
+
+   Additional information
+      https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-font_style
+
+
+forms
+~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      forms (`Form Elements <https://ckeditor.com/cke4/addon/font>`__)        
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      This plugin provides the a suite of form elements to add in the content (form, text field, checkbox, button...)
+
+   Installation
+
+      .. code-block:: yaml
+         editor:
+            config:
+               toolbarGroups:
+                  - { name: forms }         
+
+               extraPlugins:
+                  - forms
+
+         processing:
+            allowTags:
+               - form
+               - input
+               - textarea             
+         allowTagsOutside: [address, article, aside, blockquote, footer, header, hr, nav, section, div,form]
+
+      .. danger::
+         -  the configuration is not complete! 
+         - the html is converted into `&lt;form&gt;...` (also the input fields) and full of empty paragraphs...how to configure it?!
