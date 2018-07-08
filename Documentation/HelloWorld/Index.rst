@@ -615,7 +615,7 @@ divarea
 docprops
 ~~~~~~~~
 
- .. container:: table-row
+.. container:: table-row
 
    Plugin name
       docprops (`Document Properties <https://ckeditor.com/cke4/addon/docprops>`__)        
@@ -643,7 +643,7 @@ docprops
 easyimage
 ~~~~~~~~~
 
- .. container:: table-row
+.. container:: table-row
 
    Plugin name
       easyimage (`Easy Image <https://ckeditor.com/cke4/addon/easyimage>`__)        
@@ -664,7 +664,7 @@ easyimage
 embed
 ~~~~~
 
- .. container:: table-row
+.. container:: table-row
 
    Plugin name
       easyimage (`Media Embed <https://ckeditor.com/cke4/addon/embed>`__)        
@@ -725,8 +725,3 @@ embedbase
 
       .. danger::
          Would it be possible to make a complete example?
-
-
-
-
-
