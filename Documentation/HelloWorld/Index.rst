@@ -610,3 +610,123 @@ divarea
    Installation
       .. danger::
          Don't know if it is already installed or not or how to tell the difference!
+
+
+docprops
+~~~~~~~~
+
+ .. container:: table-row
+
+   Plugin name
+      docprops (`Document Properties <https://ckeditor.com/cke4/addon/docprops>`__)        
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) This plugin can be used in full page mode to manipulate the metadata of an HTML document; when in full page mode, the content to be edited is being input as a full HTML page. A full page includes the `<html>`, `<head>`, and `<body> elements. 
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               #add the toolbargroup 'document' if needed; (default.yaml and full.yaml already have it.)            
+               toolbarGroups:
+                  - { name: document }  
+
+               extraPlugins:
+                  - docprops
+
+               fullPage: true      
+
+
+easyimage
+~~~~~~~~~
+
+ .. container:: table-row
+
+   Plugin name
+      easyimage (`Easy Image <https://ckeditor.com/cke4/addon/easyimage>`__)        
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) The plugin lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN. 
+
+   Installation
+      [TBD]
+
+      .. danger::
+         Needs to sign up `CKEditor Cloud Services <https://ckeditor.com/ckeditor-cloud-services/>`__
+
+
+embed
+~~~~~
+
+ .. container:: table-row
+
+   Plugin name
+      easyimage (`Media Embed <https://ckeditor.com/cke4/addon/embed>`__)        
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin lets you embed media resources directly in the editor. 
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup if needed (e.g. default and full configuration alreay have it.)
+               toolbarGroups:
+                  - { name: insert }            
+
+               extraPlugins:
+                  - embed
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+               # configure content provider
+               embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}'   
+
+      .. danger::
+         -  you need to set up an account to https://iframely.com/ ? (paid)
+         - Look at https://docs.ckeditor.com/ckeditor4/latest/guide/dev_media_embed.html#configuring-the-content-provider
+         - the html is converted into `&lt;iframe&gt;...` and gets surrounded by a paragraph...how to configure it?!
+
+
+embedbase
+~~~~~~~~~
+
+ .. container:: table-row
+
+   Plugin name
+      embedbase (`Media Embed Base <https://ckeditor.com/cke4/addon/embedbase>`__)        
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin is a base of the Media Embed and Semantic Media Embed plugins. It exposes a set of tools under the CKEDITOR.plugins.embedBase namespace which can be used to create new media embed widgets. 
+
+   Installation
+      .. danger::
+         Actually, I have not tested it... this installation configuration is not complete!
+
+      .. code-block:: yaml
+         editor:
+            config:         
+               extraPlugins:
+                  - embedbase  
+
+      .. danger::
+         Would it be possible to make a complete example?
+
+
+
+
+
