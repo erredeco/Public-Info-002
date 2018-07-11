@@ -129,7 +129,6 @@ autoembed
       Add after "embed" Or Add after "embedsemantic"
 
       .. code-block:: yaml
-      
          editor:
             config:
                extraPlugins:
@@ -154,7 +153,6 @@ autogrow
 
    Installation
       .. code-block:: yaml
-      
          editor:
             config:
                extraPlugins:
@@ -185,14 +183,12 @@ autolink
          don't add the one from the contrib folder; the custom version shipped with TYPO3 must be used:
 
       .. code-block:: yaml
-         
          imports:
              - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
       or just the single plugin can be loaded: 
       
       .. code-block:: yaml     
-         
          editor:
             externalPlugins:
                autolinking: { resource: "EXT:rte_ckeditor/Resources/Public/JavaScript/Plugins/autolinking.js" }   
@@ -261,7 +257,6 @@ bbcode
 
    Installation
       .. code-block:: yaml
-      
          editor:
             config:
                extraPlugins:
@@ -291,7 +286,6 @@ bidi
 
    Installation
       .. code-block:: yaml
-
          editor:
             config:
                # toolbargroup example taken from the `full.yaml`) configuration file:
@@ -357,7 +351,6 @@ codesnippet
 
    Installation
       .. code-block:: yaml
-
          editor:
             config:
                # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
@@ -425,7 +418,6 @@ colorbutton
 
    Installation
       .. code-block:: yaml
-
          editor:
             config:
                toolbarGroups:
@@ -724,8 +716,6 @@ embedbase
       (taken from the official page) This plugin is a base of the Media Embed and Semantic Media Embed plugins. It exposes a set of tools under the CKEDITOR.plugins.embedBase namespace which can be used to create new media embed widgets. 
 
    Installation
-
-
       .. danger::
          Actually, I have not tested it... this installation configuration is not complete!
 
@@ -754,7 +744,6 @@ embedsemantic
       (taken from the official page) This plugin lets you embed media resources with semantic output directly in the editor. The plugin introduces a widget that allows you to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in your content.
    
    Installation
-
       .. attention::
          don't use with embed_ just use one of those two.
             
@@ -818,7 +807,6 @@ find
       (taken from the official page) This plugin adds Find and Replace dialog, allowing you to quickly search the text as well as replace words inside it. Common options available for matching: case, whole word, cyclic.
 
    Installation
-
       .. code-block:: yaml
          editor:
             config:
@@ -844,7 +832,6 @@ flash
       (taken from the official page) This plugin comes with a dialog to manage flash embed in the document, set standard and advanced properties. 
 
    Installation
-
       .. code-block:: yaml
          editor:
             config:
@@ -862,7 +849,6 @@ flash
          processing:
             allowTags:
                - object 
-
 
       .. danger::
          -  the configuration is not complete! 
@@ -885,7 +871,6 @@ font
       (taken from the official page) This plugin adds Font Size and Font Family dropdowns that applies as inline element style. 
 
    Installation
-
       .. code-block:: yaml
          editor:
             config:
@@ -920,16 +905,13 @@ forms
       This plugin provides the a suite of form elements to add in the content (form, text field, checkbox, button...)
 
    Installation
-
       .. code-block:: yaml
          editor:
             config:
                toolbarGroups:
                   - { name: forms }         
-
                extraPlugins:
                   - forms
-
          processing:
             allowTags:
                - form
@@ -940,3 +922,374 @@ forms
       .. danger::
          -  the configuration is not complete! 
          - the html is converted into `&lt;form&gt;...` (also the input fields) and full of empty paragraphs...how to configure it?!
+
+
+iframe
+~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      iframe (`IFrame Dialog <https://ckeditor.com/cke4/addon/iframe>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin provides the dialog to insert and edit inline frames (<iframe> elements) into the editor content.
+
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               toolbarGroups:
+                  - { name: insert }          
+               extraPlugins:
+                  - iframe
+         processing:
+            allowTags:
+               - iframe            
+         allowTagsOutside: [iframe]
+
+      .. danger::
+         -  the configuration is not complete! 
+         - albeit I added the iframe to alloTagsOutside, it seems ignored
+         - the html is converted into `&lt;iframe&gt;...`.how to configure it?!
+
+
+iframedialog
+~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      iframedialog (`IFrame Dialog Field <https://ckeditor.com/cke4/addon/iframe>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin provides the iframe dialog field that embeds another HTML page in the dialog for interaction. 
+      This plugin needs to be distinguished from the IFrame Dialog plugin which adds support for inserting inline frames (<iframe> elements) into the editor content.
+
+
+   Installation
+      [TBD]
+
+      .. danger::
+         -  I have not understood how and if it works, I think it is automatically included with the iframe plugin but I am not sure!!
+
+
+image
+~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      image (`Image <https://ckeditor.com/cke4/addon/image>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) This plugin adds the following image-related features to the editor
+
+   Installation
+      .. attention::
+         Don't use! inserting image is explicitely denied in standard and full configuration.
+         TBD: add link to extension to add image support
+
+image2
+~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      image2 (`Enhanced Image <https://ckeditor.com/cke4/addon/image2>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) This is an enhanced version of the Image plugin that introduces the image widget.
+
+   Installation
+      .. attention::
+         Don't use! inserting image is explicitely denied in standard and full configuration.
+         TBD: add link to extension to add image support
+
+indentblock
+~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      indentblock (`Indent Block <https://ckeditor.com/cke4/addon/indentblock>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin handles indentation of text blocks.
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup paragraph if needed (example taken from Default.yaml configuration file)
+               toolbarGroups:
+                  - { name: paragraph, groups: [ list, indent, blocks, align ] }           
+               extraPlugins:
+                  - indentblock
+
+      .. danger::
+         albeit Default.yaml and Full.yaml has "indent" in the toolbarGroup configuration, **they don't work!** 
+         you have to add the indentblock plugin!!
+
+
+   Additional information
+      You can fine-grain control the output using three different settings:
+
+      http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-indentClasses
+
+      http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-indentOffset
+
+      http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-indentUnit
+
+
+justify
+~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      justify (`Justify <https://ckeditor.com/cke4/addon/justify>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **yes** | Full: **yes**
+   
+   Description
+      (taken from the official page) This plugin adds text justification commands: left/right alignment, center and justify.
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup paragraph if needed (example taken from Full.yaml configuration file)
+               toolbarGroups:
+                  - { name: paragraph, groups: [ list, indent, blocks, align ] }   
+             
+               # Examples of classes taken from the Default.yaml configuration file
+               justifyClasses:
+                  - text-left
+                  - text-center
+                  - text-right
+                  - text-justify
+                
+               extraPlugins:
+                  - justify
+
+   Additional information
+      https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-justifyClasses
+
+
+language
+~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      language (`Language <https://ckeditor.com/cke4/addon/language>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin implements the Language toolbar button to support the `WCAG 3.1.2 Language of Parts <http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html>`__ specification.
+
+   Installation
+      .. attention::
+         you must also include the `bidi` plugin
+
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup paragraph if needed, it must incude 'bidi' (example taken from Full.yaml configuration file)
+               toolbarGroups:
+                  - { name: paragraph, groups: [ list, indent, blocks, align, bidi ] } 
+                             
+               extraPlugins:
+                  - bidi
+                  - language
+
+               # Example of languages configuration:
+               language_list: [ 'he:Hebrew:rtl', 'pt:Portuguese', 'de:German' ]   
+
+   Additional information
+      https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-language_list
+
+
+lineutils
+~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      lineutils (`Line Utilities <https://ckeditor.com/cke4/addon/lineutils>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **yes** | Full: **yes**
+   
+   Description
+      (taken from the official page) A set of utilities to find and create horizontal spaces in edited contents.
+
+   Installation
+      It will be inserted with the `insert` toolbargroup.
+
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               toolbarGroups:
+                  - { name: insert }            
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+link
+~~~~
+
+.. container:: table-row
+
+   Plugin name
+      link (`Link <https://ckeditor.com/cke4/addon/link>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **yes** | Full: **yes**
+   
+   Description
+      (taken from the official page) This plugin adds the following link and anchor related features:
+
+   Installation
+      .. attention::
+         don't add the one from the contrib folder; the custom version shipped with TYPO3 must be used:
+
+      .. code-block:: yaml
+         imports:
+             - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+         # add the toolbargroup links if needed (example taken from Full.yaml configuration file)    
+         editor:
+            config:
+               toolbarGroups:
+                  - { name: links }
+
+
+      or just the single plugin can be loaded: 
+      
+      .. code-block:: yaml     
+         editor:
+            externalPlugins:
+               typo3link: { resource: "EXT:rte_ckeditor/Resources/Public/JavaScript/Plugins/typo3link.js", route: "rteckeditor_wizard_browse_links" }
+
+         # add the toolbargroup links if needed (example taken from Full.yaml configuration file)    
+         editor:
+            config:
+               toolbarGroups:
+                  - { name: links }
+
+
+liststyle
+~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      liststyle (`List Style <https://ckeditor.com/cke4/addon/liststyle>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin adds numbered list and ordered list properties dialogs (available in context menu).
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup paragraph if needed, it must contain the group 'list' (example taken from Default.yaml configuration file)
+               toolbarGroups:
+                  - { name: paragraph, groups: [ list, indent, blocks, align ] }
+               
+               extraPlugins:
+                  - liststyle
+
+magicline
+~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      magicline (`Magic Line <https://ckeditor.com/cke4/addons/search/plugins/magicline>`__) 
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**       
+
+   Description
+      (taken from the official page) This plugin makes it easier to place cursor and add content near some problematic document elements like, for example, images, tables or ...    
+
+   Installation
+      None necessary, already loaded in the editor; just add the `insert` toolbargroup to see it in action      
+
+
+mathjax
+~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      mathjax (`Mathematical Formulas <https://ckeditor.com/cke4/addon/mathjax>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) TMathematical plugin that introduces the MathJax widget. You can use it to create or modify equations using TeX.
+
+   Installation
+      .. code-block:: yaml
+         editor:
+            config:
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               toolbarGroups:
+                  - { name: insert }   
+
+               extraPlugins:
+                  - mathjax                           
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+               # Configuration example
+               mathJaxLib: '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML'
+               mathJaxClass: 'my-math'
+
+   Additional information
+      https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-mathJaxClass
+      https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-mathJaxLib
+
+      .. attention::
+         This plugin is not compatible with Internet Explorer 8
+
+      .. note::
+         The MathJax.js must be loaded also in frontend!!
+         ts setup for example:
+
+         .. code-block:: typoscript
+            page.includeJSFooterlibs.math = //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
+            page.includeJSFooterlibs.math.external = 1 
+
