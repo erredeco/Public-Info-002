@@ -129,6 +129,7 @@ autoembed
       Add after "embed" Or Add after "embedsemantic"
 
       .. code-block:: yaml
+
          editor:
             config:
                extraPlugins:
@@ -153,6 +154,7 @@ autogrow
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                extraPlugins:
@@ -183,12 +185,14 @@ autolink
          don't add the one from the contrib folder; the custom version shipped with TYPO3 must be used:
 
       .. code-block:: yaml
+
          imports:
              - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
       or just the single plugin can be loaded: 
       
-      .. code-block:: yaml     
+      .. code-block:: yaml
+
          editor:
             externalPlugins:
                autolinking: { resource: "EXT:rte_ckeditor/Resources/Public/JavaScript/Plugins/autolinking.js" }   
@@ -257,6 +261,7 @@ bbcode
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                extraPlugins:
@@ -286,6 +291,7 @@ bidi
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # toolbargroup example taken from the `full.yaml`) configuration file:
@@ -351,6 +357,7 @@ codesnippet
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
@@ -418,6 +425,7 @@ colorbutton
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                toolbarGroups:
@@ -451,6 +459,7 @@ colordialog
       Install colorbutton_ before 
 
       .. code-block:: yaml
+
          editor:
             config:
                toolbarGroups:
@@ -483,6 +492,7 @@ copyformatting
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # add `cleanup` to the `basicstyles` toolbarGroup if needed (e.g. default.yaml and full.yaml, configurations already have it)
@@ -508,6 +518,7 @@ devtools
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                extraPlugins:
@@ -547,6 +558,7 @@ dialogadvtab
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                extraPlugins:
@@ -570,6 +582,7 @@ div
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                #add the toolbargroup 'paragraph' if needed; it must contain the 'blocks' group (default.yaml and full.yaml configurations already have it.)
@@ -620,6 +633,7 @@ docprops
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                #add the toolbargroup 'document' if needed; (default.yaml and full.yaml configurations already have it.)            
@@ -673,6 +687,7 @@ embed
          don't use with embedsemantic_ just use one of those two.
 
       .. code-block:: yaml
+      
          editor:
             config:
                # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
@@ -720,6 +735,7 @@ embedbase
          Actually, I have not tested it... this installation configuration is not complete!
 
       .. code-block:: yaml
+
          editor:
             config:         
                extraPlugins:
@@ -1305,7 +1321,7 @@ mathjax
          ts setup for example:
 
          .. code-block:: typoscript
-         
+
             page.includeJSFooterlibs.math = //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
             page.includeJSFooterlibs.math.external = 1 
 
