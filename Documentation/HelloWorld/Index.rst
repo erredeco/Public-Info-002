@@ -744,10 +744,12 @@ embedsemantic
       (taken from the official page) This plugin lets you embed media resources with semantic output directly in the editor. The plugin introduces a widget that allows you to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in your content.
    
    Installation
+      
       .. attention::
          don't use with embed_ just use one of those two.
             
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
@@ -808,6 +810,7 @@ find
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup if needed (e.g. full.yaml configuration alreay has it.)
@@ -833,6 +836,7 @@ flash
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
@@ -872,6 +876,7 @@ font
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                stylesSet:
@@ -906,6 +911,7 @@ forms
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                toolbarGroups:
@@ -941,6 +947,7 @@ iframe
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
@@ -1036,6 +1043,7 @@ indentblock
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup paragraph if needed (example taken from Default.yaml configuration file)
@@ -1075,6 +1083,7 @@ justify
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup paragraph if needed (example taken from Full.yaml configuration file)
@@ -1114,6 +1123,7 @@ language
          you must also include the `bidi` plugin
 
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup paragraph if needed, it must incude 'bidi' (example taken from Full.yaml configuration file)
@@ -1149,6 +1159,7 @@ lineutils
       It will be inserted with the `insert` toolbargroup.
 
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
@@ -1178,6 +1189,7 @@ link
          don't add the one from the contrib folder; the custom version shipped with TYPO3 must be used:
 
       .. code-block:: yaml
+
          imports:
              - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
@@ -1190,7 +1202,8 @@ link
 
       or just the single plugin can be loaded: 
       
-      .. code-block:: yaml     
+      .. code-block:: yaml
+
          editor:
             externalPlugins:
                typo3link: { resource: "EXT:rte_ckeditor/Resources/Public/JavaScript/Plugins/typo3link.js", route: "rteckeditor_wizard_browse_links" }
@@ -1218,6 +1231,7 @@ liststyle
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup paragraph if needed, it must contain the group 'list' (example taken from Default.yaml configuration file)
@@ -1261,6 +1275,7 @@ mathjax
 
    Installation
       .. code-block:: yaml
+
          editor:
             config:
                # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
@@ -1290,6 +1305,7 @@ mathjax
          ts setup for example:
 
          .. code-block:: typoscript
+         
             page.includeJSFooterlibs.math = //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
             page.includeJSFooterlibs.math.external = 1 
 
