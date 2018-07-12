@@ -360,7 +360,7 @@ codesnippet
 
          editor:
             config:
-               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations already have it.)
                toolbarGroups:
                   - { name: insert }            
 
@@ -682,15 +682,14 @@ embed
       (taken from the official page) This plugin lets you embed media resources directly in the editor. 
 
    Installation
-
       .. attention::
          don't use with embedsemantic_ just use one of those two.
 
       .. code-block:: yaml
-      
+
          editor:
             config:
-               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations already have it.)
                toolbarGroups:
                   - { name: insert }            
 
@@ -768,7 +767,7 @@ embedsemantic
 
          editor:
             config:
-               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations already have it.)
                toolbarGroups:
                   - { name: insert }            
 
@@ -829,7 +828,7 @@ find
 
          editor:
             config:
-               # add the toolbargroup if needed (e.g. full.yaml configuration alreay has it.)
+               # add the toolbargroup if needed (e.g. full.yaml configuration already has it.)
                toolbarGroups:
                   - { name: editing,   groups: [find] }          
 
@@ -855,7 +854,7 @@ flash
 
          editor:
             config:
-               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations already have it.)
                toolbarGroups:
                   - { name: insert }            
 
@@ -900,7 +899,7 @@ font
                   - { name: "Orange title H2", element: "h2", styles: { color: "orange", background: "blue" } }
                   - { name: "Orange title H3", element: "h3", styles: { color: "orange", background: "blue" } }
 
-               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations already have it.)
                toolbarGroups:
                   - { name: styles }         
 
@@ -966,7 +965,7 @@ iframe
 
          editor:
             config:
-               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               # add the toolbargroup if needed (e.g. default.yaml and full.yaml configurations already have it.)
                toolbarGroups:
                   - { name: insert }          
                extraPlugins:
@@ -1002,7 +1001,7 @@ iframedialog
       [TBD]
 
       .. danger::
-         -  I have not understood how and if it works, I think it is automatically included with the iframe plugin but I am not sure!!
+         I have not understood how and if it works, I think it is automatically included with the iframe plugin but I am not sure!!
 
 
 image
@@ -1178,7 +1177,7 @@ lineutils
 
          editor:
             config:
-               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations already have it.)
                toolbarGroups:
                   - { name: insert }            
 
@@ -1294,7 +1293,7 @@ mathjax
 
          editor:
             config:
-               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations alreay have it.)
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations already have it.)
                toolbarGroups:
                   - { name: insert }   
 
@@ -1325,3 +1324,226 @@ mathjax
             page.includeJSFooterlibs.math = //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
             page.includeJSFooterlibs.math.external = 1 
 
+newpage
+~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      newpage (`New Page <https://ckeditor.com/cke4/addon/newpage>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin adds toolbar button which clears the editing area and creates a new page.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup document if needed (example taken from Default.yaml configuration file)
+               toolbarGroups:
+                  - { name: document, groups: [ mode ] }    
+               
+               extraPlugins:
+                  - newpage
+
+               # Configuration example   
+               newpage_html: "<p>Type your text here.</p>"   
+
+   Additional information
+      https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-newpage_html
+
+notification
+~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      notification (`Notification <https://ckeditor.com/cke4/addon/notification>`__) 
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**
+   
+   Description
+      (taken from the official page) This plugin implements methods for creating and displaying various types of notifications – information, warning, success and progress.
+
+   Installation
+      None necessary, already loaded in the editor.
+
+
+notificationaggregator
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      notificationaggregator (`Notification Aggregator <https://ckeditor.com/cke4/addon/notificationaggregator>`__) 
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**
+   
+   Description
+      (taken from the official page) This plugin exposes the NotificationAggregator class which allows you to aggregate multiple tasks (e.g. uploading multiple files) into a single notification.
+
+   Installation
+      None necessary, already loaded in the editor.
+
+pagebreak
+~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      pagebreak (`Page Break <https://ckeditor.com/cke4/addon/pagebreak>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin adds toolbar button which inserts horizontal page breaks. This feature is useful for setting document printing sections.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations already have it.)
+               toolbarGroups:
+                  - { name: insert }   
+
+               extraPlugins:
+                  - pagebreak                           
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+
+      .. danger::
+         After save, the `<span style="display:none">&nbsp;</span>` is removed and it adds a <p> between the div and the span: In this way, the separator becomes invisible inside the editor! I don't know how to alter the processing TYPO3 does!!
+
+panelbutton
+~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      panelbutton (`Panel Button <https://ckeditor.com/cke4/addon/panelbutton>`__) 
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes** (TBD - should be "depends" for all three cases)
+   
+   Description
+      (taken from the official page) This plugin extends the Button Interface plugin and represents a single dropdown menu item, color panel, etc.
+
+   Installation
+      (Not sure if I have understood) Should be automatically loaded with the plugins that make use of it e.g. colorbutton; so no installation is necessary. 
+
+
+pastefromword
+~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      pastefromword (`Paste From Word <https://ckeditor.com/cke4/addon/pastefromword>`__) 
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**
+   
+   Description
+      (taken from the official page) This plugin allows you to paste content from Microsoft Word and maintain original content formatting. It also adds the Paste from Word toolbar button which makes it possible to paste clipboard data this way only on demand.
+
+   Installation
+      None necessary; should be automatically included with the clipboard toolbargroup.
+
+
+placeholder
+~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      placeholder (`Placeholder <https://ckeditor.com/cke4/addon/placeholder>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin lets you create and edit placeholders (non-editable text fragments). Editing the placeholder text is only possible through the Placeholder Properties dialog window that opens when you double-click an existing placeholder or use the Placeholder toolbar button.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations already have it.)
+               toolbarGroups:
+                  - { name: insert }   
+
+               extraPlugins:
+                  - placeholder                           
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+   Additional information
+      https://docs.ckeditor.com/ckeditor4/latest/guide/dev_placeholder.html
+
+
+preview
+~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      preview (`Preview <https://ckeditor.com/cke4/addon/preview>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin adds toolbar button which shows a preview of the document as it will be displayed to end users or printed.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup document if needed (e.g. default.yaml and full.yaml configurations already have it) and add the group preview to it .
+               toolbarGroups:
+                  - { name: document, groups: [ mode,preview ] }     
+
+                extraPlugins:
+                  - preview
+
+
+print
+~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      print (`Print <https://ckeditor.com/cke4/addon/print>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+   
+   Description
+      (taken from the official page) This plugin activates the printing function.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup document if needed (e.g. default.yaml and full.yaml configurations already have it) and add the group print to it .
+               toolbarGroups:
+                  - { name: document, groups: [ mode,print ] }     
+
+                extraPlugins:
+                  - print
