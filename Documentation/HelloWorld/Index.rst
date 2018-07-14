@@ -1547,3 +1547,610 @@ print
 
                 extraPlugins:
                   - print
+
+
+
+save
+~~~~
+
+.. container:: table-row
+
+   Plugin name
+      save (`Save <https://ckeditor.com/cke4/addon/save>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+   
+   Description
+      (taken from the official page) When CKEditor is placed inside an HTML form, this plugin saves the editor content and submits it to the server. It also adds the Save toolbar button which submits the form that contains the editor.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup document if needed (example taken from  Default.yaml) .
+               toolbarGroups:
+                  - { name: document, groups: [ mode ] }  
+
+                extraPlugins:
+                  - save
+
+      .. danger::
+         I don't know if it is actually useful or can mess with TYPO3
+
+scayt
+~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      scayt (`SpellCheckAsYouType (SCAYT) <https://ckeditor.com/cke4/addon/scayt>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **yes** | Full: **yes** 
+   
+   Description
+      (taken from the official page) This plugin brings Spell Check As You Type (SCAYT) functionality into CKEditor.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup document if needed (example taken from  Default.yaml) with the group spellchecker.
+               toolbarGroups:
+                  - { name: editing, groups: [ spellchecker ] }
+
+selectall
+~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      selectall (`Select All <https://ckeditor.com/cke4/addon/selectall>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **yes** 
+   
+   Description
+      (taken from the official page) This plugin adds select all toolbar button which makes possible to select entire contents of the document. It makes it is easier to e.g. apply any formatting to a larger text fragment.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup document if needed (example taken from  Full.yaml) with the group selection.
+               toolbarGroups:
+                  - { name: editing,   groups: [find, selection, spellchecker] }
+
+                extraPlugins:
+                  - selectall   
+
+
+sharedspace
+~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      sharedspace (`Shared Space <https://ckeditor.com/cke4/addon/sharedspace>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+   
+   Description
+      (taken from the official page) This plugin makes it possible to share the same editor toolbar and bottom bar among several CKEditor instances.
+
+   Installation
+      TBD
+
+      .. danger::
+         How to configure it?? I have not seen documentation so far.
+
+
+showblocks
+~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      showblocks (`Show Blocks <https://ckeditor.com/cke4/addon/showblocks>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+   
+   Description
+      (taken from the official page) This plugin adds the command to visualize all block-level elements by surrounding them with an outline and displaying their element name at the top-left.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup tools if needed (example taken from  Full.yaml):
+                  - { name: tools }
+
+                extraPlugins:
+                  - showblocks 
+
+smiley
+~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      smiley (`Insert Smiley <https://ckeditor.com/cke4/addon/smiley>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+   
+   Description
+      (taken from the official page) This plugin provides a set of emoticons to insert into the editor via a dialog window. 
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations already have it.)
+               toolbarGroups:
+                  - { name: insert }            
+
+               extraPlugins:
+                  - smiley
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+
+
+   Additional information
+      You can customize the plugin usint the following settings
+
+      http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-smiley_columns
+
+      http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-smiley_descriptions
+
+      http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-smiley_images
+
+      http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-smiley_path
+
+
+
+sourcedialog
+~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      sourcedialog (`Source Dialog <https://ckeditor.com/cke4/addon/sourcedialog>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **yes** | Full: **yes** 
+   
+   Description
+      (taken from the official page) The Source Dialog plugin provides an easy way to edit raw HTML source of the editor content.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup document if needed (Example taken from Default.yaml configuration)
+               toolbarGroups:
+                  - { name: document, groups: [ mode ] }        
+
+
+specialchar
+~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      specialchar (`Special Characters <https://ckeditor.com/cke4/addon/specialchar>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **yes** | Full: **yes** 
+   
+   Description
+      (taken from the official page) With this plugin it is possible to insert characters that are not part of the standard keyboard. 
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations already have it.)
+               toolbarGroups:
+                  - { name: insert }            
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+
+stylesheetparser
+~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      stylesheetparser (`Stylesheet Parser <https://ckeditor.com/cke4/addon/stylesheetparser>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+   
+   Description
+      (taken from the official page) This plugin fills the Styles drop-down list with a list of element styles built from the contents.css file. Thanks to this the editor content styles are consistent with the document stylesheet.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup styles if needed (e.g. default.yaml and full.yaml configurations already have it.)
+               toolbarGroups:
+                  - { name: styles }            
+
+               extraPlugins:
+                  - stylesheetparser    
+
+               #Provide your own stylesheet configuration; you can also use EXT: path syntax   
+               contentsCss: /fileadmin/default.css
+
+   Additional information
+      .. warning::
+         This plugin is incompatible with Advanced Content Filter, so it disables the filter after installing.
+
+      https://sdk.ckeditor.com/samples/styles.html   
+
+      https://docs.ckeditor.com/ckeditor4/latest/guide/dev_styles.html#the-stylesheet-parser-plugin
+
+
+
+table
+~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      table (`Table <https://ckeditor.com/cke4/addon/table>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **yes** | Full: **yes** 
+   
+   Description
+      (taken from the official page) This plugin adds the Table Properties dialog window with support for creating tables and setting basic table properties.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations already have it.)
+               toolbarGroups:
+                  - { name: insert }            
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+      .. note::
+         TYPO3 ships also a custom plugin to create tables quickly, with dragging the mouse to select the number
+         of rows and cells to create. Just import the plugins.yaml configuration file (Default.yaml and Full.yaml already do that)
+         
+         .. code-block:: yaml
+
+            editor:
+               imports:
+                  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+
+         or just the single plugin can be loaded: 
+      
+         .. code-block:: yaml
+
+            editor:
+               externalPlugins:
+                  quicktable: { resource: "EXT:rte_ckeditor/Resources/Public/JavaScript/Plugins/quicktable/plugin.js" }
+
+   Additional information
+      .. danger::
+         It seems that there is no need to add the table and tabletools toolbargroups (See full.yaml)!!
+
+
+tableresize
+~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      tableresize (`Table Resize <https://ckeditor.com/cke4/addon/tableresize>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+   
+   Description
+      (taken from the official page) This plugin adds support for table column resizing with your mouse.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup insert if needed (e.g. default.yaml and full.yaml configurations already have it.)
+               toolbarGroups:
+                  - { name: insert }            
+
+               # insert toolbar adds also image support, that must be removed.
+               removePlugins:
+                  - image
+
+               extraPlugins:
+                  - tableresize   
+
+
+tabletools
+~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      tabletools (`Table Tools <https://ckeditor.com/cke4/addon/tabletools>`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **yes** | Full: **yes** 
+   
+   Description
+      (taken from the official page) This plugin adds a more advanced context menu for table items and the Cell Properties dialog window .
+
+   Installation
+      None necessary, already loaded in the editor  with table
+
+
+templates
+~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      templates (`Templates <https://ckeditor.com/cke4/addon/templates`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+
+   Description
+      (taken from the official page)This plugin provides a dialog to offer predefined content templates - with page layout, text formatting and styles.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup document if needed (e.g. default.yaml and full.yaml configurations already have it.) with the doctools group.
+               toolbarGroups:
+                  - { name: document,  groups: [ mode, document, doctools ] }
+
+               extraPlugins:
+                  - templates
+
+               #Add your template definition;  It must match definitions loaded with the templates_files setting
+               templates:  test    
+
+               #Add your own template file   
+               templates_files: /fileadmin/templates.js
+
+      .. danger::
+         I am not able to add mine
+   
+
+   Additional information
+      if the options `config.templates` and `config.teplates_files` are not set, a default is loaded. The default 
+      file is located at EXT:rte_ckeditor/Resources/Public/JavaScript/Contrib/plugins/templates/templates/default.js
+
+      https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-templates
+
+      https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-templates_files
+
+      https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/templates/templates/default.js
+
+uicolor
+~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      uicolor (`UI Color Picker <https://ckeditor.com/cke4/addon/uicolor`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+
+   Description
+      (taken from the official page) This plugin provides a color picker dialog to select and preview the editor user interface color provided by the skin chamelon feature.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup tools if needed (e.g. default.yaml and full.yaml configurations already have it.)
+               toolbarGroups:
+                  - { name: tools }
+
+               extraPlugins:
+                  - uicolor
+
+
+   Additional information
+      .. info::
+         you can manually change the interface color using:
+
+          .. code-block:: yaml
+
+            editor:
+               config:
+                  uiColor: "#ff3333"        
+
+
+uploadfile
+~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      uploadfile (`Upload File <https://ckeditor.com/cke4/addon/uploadfile`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+
+   Description
+      (taken from the official page) A simple plugin that allows you to drag&drop a file into the editor. 
+      The editor will then automatically send the file to your pre-configured backend and convert it into a link.
+   
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               extraPlugins:
+                  - uploadfile
+
+      .. danger::
+         -  the configuration is not complete! 
+         -  you need to add server-side configuration: config.uploadUrl must contain the location of the script that handles the file upload of the files see  https://docs.ckeditor.com/ckeditor4/latest/guide/dev_file_upload.html
+
+
+uploadimage
+~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      uploadimage (`Upload Image <https://ckeditor.com/cke4/addon/uploadimage`__) 
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no** 
+
+   Description
+      (taken from the official page) This plugin enables support for uploading images that were dropped or pasted into the editor. 
+   
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               extraPlugins:
+                  - uploadimage
+
+      .. danger::
+         - should not be used (see image plugin)
+         - the configuration is not complete! 
+         - you need to add server-side configuration: config.uploadUrl must contain the location of the script that handles the file upload of the files see  https://docs.ckeditor.com/ckeditor4/latest/guide/dev_file_upload.html
+
+uploadwidget
+~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      uploadwidget (`Upload Widget <https://ckeditor.com/cke4/addon/uploadwidget>`__)
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**
+
+   Description
+      (taken from the official page) This plugin implements a base class for creating non-blocking, live upload of files while the user is editing content.
+
+   Installation
+      None necessary, already loaded in the editor **[I think]**
+
+
+widget
+~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      widget (`Widget <https://ckeditor.com/cke4/addon/widget>`__)
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**
+
+   Description
+      (taken from the official page) This plugin introduces the Widget API. It is required by all plugins that create widgets.
+
+   Installation
+      None necessary, already loaded in the editor 
+
+
+widgetselection
+~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Plugin name
+      widgetselection (`Widget Selection <https://ckeditor.com/cke4/addon/widgetselection>`__)
+
+   Already present in config
+      Minimal:**yes** | Default: **yes** | Full: **yes**
+
+   Description
+      (taken from the official page) This plugin improves selection handling for Widget elements. Due to some browser bugs additional handling is required to allow the widget selection.
+
+   Installation
+      None necessary, already loaded in the editor **[I think]**
+
+
+wsc
+~~~
+
+.. container:: table-row
+
+   Plugin name
+      wsc (`WebSpellChecker <https://ckeditor.com/cke4/addon/wsc>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **yes** | Full: **yes**
+
+   Description
+      (taken from the official page)  This plugin brings spell checking in a dialog window into CKEditor.
+      WebSpellChecker is "installation-less", using the web services of WebSpellChecker.net.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               # add the toolbargroup editing if needed (e.g. default.yaml and full.yaml configurations already have it.)  with the group spellchecker
+               toolbarGroups:
+                  - { name: editing, groups: [ spellchecker ] }
+
+
+xml
+~~~
+
+.. container:: table-row
+
+   Plugin name
+      xml (`XML <https://ckeditor.com/cke4/addon/xml>`__)
+
+   Already present in config
+      Minimal:**no** | Default: **no** | Full: **no**
+
+   Description
+      (taken from the official page) This plugin provides the CKEDITOR.xml API which is a tool for working with XML.
+
+   Installation
+      .. code-block:: yaml
+
+         editor:
+            config:
+               extraPlugins:
+                  - xml
+
+      .. danger::
+         - the configuration is not complete! 
+         - I don't know how to make a full example (or where to find it) or if it is necessary!
