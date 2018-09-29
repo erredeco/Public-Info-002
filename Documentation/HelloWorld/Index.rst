@@ -2126,21 +2126,23 @@ wordcount
                extraPlugins:
                   - wordcount
                   
-             #configuration example (look  at Editor/Base.yaml, this configuration is taken from there. And refer to https://ckeditor.com/cke4/addon/wordcount):     
-             wordcount:
-               showParagraphs: true
-               showWordCount: true
-               showCharCount: true
-               countSpacesAsChars: true
-               countHTML: false
-               countLineBreaks: false
-               maxWordCount: -1
-               maxCharCount: -1
-               pasteWarningDuration: 5000                  
+                #configuration example (look  at Editor/Base.yaml, this configuration is taken from there. And refer to https://ckeditor.com/cke4/addon/wordcount):     
+                wordcount:
+                  showParagraphs: true
+                  showWordCount: true
+                  showCharCount: true
+                  countSpacesAsChars: true
+                  countHTML: false
+                  countLineBreaks: false
+                  maxWordCount: -1
+                  maxCharCount: -1
+                  pasteWarningDuration: 5000                  
                   
    Additional information
       .. info::
-         Please note that this plugin is only available for TYPO3 v.9; if you need it on version 8.6.x you can install https://github.com/mschwemer/rte_ckeditor_wordcount - look at the article https://typo3worx.eu/2017/05/extend-typo3-ckeditor/.
+         Please note that this plugin is only available for TYPO3 v.9; if you need it on version 8.6.x you can install
+         https://github.com/mschwemer/rte_ckeditor_wordcount - 
+         look at the article https://typo3worx.eu/2017/05/extend-typo3-ckeditor/.
 
 wsc
 ~~~
