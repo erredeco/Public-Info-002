@@ -2139,9 +2139,9 @@ wordcount
                   pasteWarningDuration: 5000                  
                   
    Additional information
-      .. info::
+      .. note::
          Please note that this plugin is only available for TYPO3 v.9; if you need it on version 8.6.x you can install
-         https://github.com/mschwemer/rte_ckeditor_wordcount - 
+         https://github.com/mschwemer/rte_ckeditor_wordcount
          look at the article https://typo3worx.eu/2017/05/extend-typo3-ckeditor/.
 
 wsc
