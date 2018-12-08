@@ -973,12 +973,19 @@ iframe
          processing:
             allowTags:
                - iframe            
-         allowTagsOutside: [iframe]
 
+
+
+      .. note::
+         You must add the `<iframe>` to the list of allowed tags in `lib.parseFunc_RTE` in your TypoScript Setup:
+
+         .. code-block:: typoscript
+
+            lib.parseFunc_RTE.allowTags:=addToList(iframe)
+         
       .. danger::
-         -  the configuration is not complete! 
-         - albeit I added the iframe to alloTagsOutside, it seems ignored
-         - the html is converted into `&lt;iframe&gt;...`.how to configure it?!
+         - when I added the iframe to alloTagsOutside, it seems ignored
+         - the iframe gets surrounded by a paragraph... I haven't found how to disable it :( 
 
 
 iframedialog
