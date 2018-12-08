@@ -707,12 +707,21 @@ embed
             allowTags:
                - iframe 
 
+      .. note::
+         You must add the `<iframe>` to the list of allowed tags in `lib.parseFunc_RTE` in your TypoScript Setup:
+
+         .. code-block:: typoscript
+
+            lib.parseFunc_RTE.allowTags:=addToList(iframe)
+
+
 
       .. danger::
          -  the configuration is not complete! 
-         -  you need to set up an account to https://iframely.com/ ? (paid)
+         -  you need to set up an account to https://iframely.com/ ? (paid) - it seems not, just a suggestion
          - Look at https://docs.ckeditor.com/ckeditor4/latest/guide/dev_media_embed.html#configuring-the-content-provider
-         - the html is converted into `&lt;iframe&gt;...` and gets surrounded by a paragraph...how to configure it?!
+         - the `<iframe>` is surrounded by `<p>` I don't know how to remove it
+         - the plugin also adds a couple of `<div>`s that also allows a fluid, 16:9 aspect ratio video; I don't know how to configure this
 
 
 embedbase
