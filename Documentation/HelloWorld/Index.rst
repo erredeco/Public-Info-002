@@ -1956,17 +1956,31 @@ templates
                #Add your template definition;  It must match definitions loaded with the templates_files setting
                templates:  test    
 
-               #Add your own template file   
-               templates_files: /fileadmin/templates.js
+               #Add your own template file, the EXT:yourext syntax can be used  
+               templates_files: ['EXT:yourext/Resource/Public/JavaScript/templates/default.js']
 
-      .. danger::
-         I am not able to add mine
+      .. note::         
+         It is also possible to use this notation, that is more readable when you use more than one file
    
+         .. code-block:: yaml
+
+            editor:
+               config:
+                  templates_files:
+                     - EXT:yourext/Resource/Public/JavaScript/templates/default.js
+
+         
 
    Additional information
       if the options `config.templates` and `config.teplates_files` are not set, a default is loaded. The default 
       file is located at EXT:rte_ckeditor/Resources/Public/JavaScript/Contrib/plugins/templates/templates/default.js
-
+      
+      You can also look at this example: https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/templates/templates/default.js 
+      
+      If you want to use preview images for your template, it is advisable to copy the same folder structure inside EXT:rte_ckeditor/Resources/Public/JavaScript/Contrib/plugins/templates/templates/
+      
+      Other documentation:
+      
       https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-templates
 
       https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_config.html#cfg-templates_files
