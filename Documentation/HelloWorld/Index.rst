@@ -1933,7 +1933,7 @@ templates
 .. container:: table-row
 
    Plugin name
-      templates (`Templates <https://ckeditor.com/cke4/addon/templates`__) 
+      templates (`Templates <https://ckeditor.com/cke4/addon/templates>`__) 
 
    Already present in config
       Minimal:**no** | Default: **no** | Full: **no** 
