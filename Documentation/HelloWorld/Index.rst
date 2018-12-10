@@ -1993,7 +1993,7 @@ uicolor
 .. container:: table-row
 
    Plugin name
-      uicolor (`UI Color Picker <https://ckeditor.com/cke4/addon/uicolor`__) 
+      uicolor (`UI Color Picker <https://ckeditor.com/cke4/addon/uicolor>`__) 
 
    Already present in config
       Minimal:**no** | Default: **no** | Full: **no** 
@@ -2031,7 +2031,7 @@ uploadfile
 .. container:: table-row
 
    Plugin name
-      uploadfile (`Upload File <https://ckeditor.com/cke4/addon/uploadfile`__) 
+      uploadfile (`Upload File <https://ckeditor.com/cke4/addon/uploadfile>`__) 
 
    Already present in config
       Minimal:**no** | Default: **no** | Full: **no** 
@@ -2059,7 +2059,7 @@ uploadimage
 .. container:: table-row
 
    Plugin name
-      uploadimage (`Upload Image <https://ckeditor.com/cke4/addon/uploadimage`__) 
+      uploadimage (`Upload Image <https://ckeditor.com/cke4/addon/uploadimage>`__) 
 
    Already present in config
       Minimal:**no** | Default: **no** | Full: **no** 
