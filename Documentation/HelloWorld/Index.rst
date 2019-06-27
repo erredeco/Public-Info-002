@@ -1958,6 +1958,8 @@ templates
 
                #Add your own template file, the EXT:yourext syntax can be used  
                templates_files: ['EXT:yourext/Resource/Public/JavaScript/templates/default.js']
+               #Do not remove every content
+               templates_replaceContent = false
 
       .. note::         
          It is also possible to use this notation, that is more readable when you use more than one file
