@@ -1976,10 +1976,16 @@ templates
    Additional information
       if the options `config.templates` and `config.teplates_files` are not set, a default is loaded. The default 
       file is located at EXT:rte_ckeditor/Resources/Public/JavaScript/Contrib/plugins/templates/templates/default.js
-      
       You can also look at this example: https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/templates/templates/default.js 
       
       If you want to use preview images for your template, it is advisable to copy the same folder structure inside EXT:rte_ckeditor/Resources/Public/JavaScript/Contrib/plugins/templates/templates/
+      
+      .. danger::
+         in the js file the path for the preview images is calculated on the position of the CKEditor itself;
+         you can use an absolute path if needed: this works:
+         .. code-block:: javascript
+            imagesPath: 'https://typo3.9.yourdemo.it:8890/typo3conf/ext/bhsiteconf/Resources/Public/templates/images/',       
+      
       
       Other documentation:
       
